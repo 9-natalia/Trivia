@@ -20,22 +20,26 @@ print(CYAN+"...:::Pondremos a prueba tus conocimientos:::...\n"+RESET+"\033[0m")
 time.sleep(1)
 print("Comenzarás con",puntaje,"puntos\n")
 time.sleep(1)
+nombre = input(BLUE+"Ingresa tu nombre: "+RESET)
+time.sleep(1)
+print(YELLOW+"\n+============================================================+")
+print("\t¡ Hola,",nombre+"!")
+print ("Responde las siguientes preguntas escribiendo la letra de la\nalternativa y presionando 'Entrer' para enviar tu respuesta: ")
+print("+============================================================+\n"+RESET)
+time.sleep(2)
+print(RED+"Aviso:"+RESET,"\n- Los puntos ganados o perdidos varian entre el 0 al 10")
+print("- Algunas respuestas te pueden '+', '-', '*' o '/' tu puntaje total")
+print("- Hay mensajes secretos que te permitiran ganar entre 10 a 100 puntos")
+time.sleep(2)
 while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
   intentos += 1
-  print("Intento número:", intentos)
-  input("Presiona Enter para continuar")
-  nombre = input(BLUE+"\nIngresa tu nombre: "+RESET)
-  print("")
+  print("\nIntento número:", intentos)
+  input("Presiona Enter para continuar\n")
   for numero_carga in range (5,0,-1):
     print(numero_carga)
-    time.sleep(1)
-  print(YELLOW+"\n+============================================================+")
-  print("\t¡ Hola,",nombre,"!")
-  print ("Responde las siguientes preguntas escribiendo la letra de la\nalternativa y presionando 'Entrer' para enviar tu respuesta: ")
-  print("+============================================================+\n"+RESET)
-  time.sleep(2)
+    time.sleep(1)      
   #Pregunta 1
-  print("1. ¿De qué nacionalidad era Juana de Arco?")
+  print("\n1. ¿De qué nacionalidad era Juana de Arco?")
   print('''
 a. Inglesa
 b. Italiana
@@ -51,13 +55,13 @@ d. Alemana\n''')
     punto = random.randint(0, 10)
     puntaje += punto
     print("\nCorrecto", nombre, "!")
-    print("Ganastes",punto,"puntos")
+    print("\nGanastes",punto,"puntos")
     print("Puntaje actual: ",puntaje)
   else:
     punto = random.randint(0, 10)
     puntaje -= punto
     print("\nIncorrecto", nombre, "!")
-    print("Perdistes",punto,"puntos")
+    print("\nPerdistes",punto,"puntos")
     print("Puntaje actual: ",puntaje)
   time.sleep(2)
   #Pregunta 2
@@ -76,31 +80,31 @@ d. Donatello\n''')
     punto = random.randint(0, 10)
     puntaje -= punto
     print("\nIncorrecto!", nombre, "\nMiguel Angel pintó la creación de Adán")
-    print("Perdistes",punto,"puntos")
+    print("\nPerdistes",punto,"puntos")
     print("Puntaje actual: ",puntaje,)
   elif respuesta_2 == "c":
     punto = random.randint(0, 10)
     puntaje -= punto
     print("\nIncorrecto!", nombre, "\nPablo Rubens pinto el juicio de Paris")
-    print("Perdistes",punto,"puntos")
+    print("\nPerdistes",punto,"puntos")
     print("Puntaje actual: ",puntaje,)
   elif respuesta_2 == "d":
     punto = random.randint(0, 10)
     puntaje -= punto
-    print("Perdistes",punto,"puntos")
     print("\nIncorrecto!", nombre, "\nDonatello hizo el Festín de Herodes en un relieve en bronce")
+    print("\nPerdistes",punto,"puntos")
     print("Puntaje actual: ",puntaje,)
   elif respuesta_2 == "x":
     punto = random.randint(10, 100)
     puntaje += punto
     print("\nEncontrastes el mensaje secreto!!\nEl hombre de vitruvio fue dibujado por Leonardo Da Vinci")
-    print("Ganastes",punto,"puntos!!")
+    print("\nGanastes",punto,"puntos!!")
     print("Puntaje actual: ",puntaje,)
   else:
     punto = random.randint(0, 10)
     puntaje += punto
     print("\nMuy bien", nombre, "!")
-    print("Ganastes",punto,"puntos")
+    print("\nGanastes",punto,"puntos")
     print("Puntaje actual: ",puntaje,)
   time.sleep(2)
   #Pregunta3
@@ -118,23 +122,23 @@ d. René Descartes\n''')
   if respuesta_3 == "a":
     puntaje += 5
     print("\n...No es correcto", nombre,"\nPero.. te daré unos puntos")
-    print(punto,"puntos")
+    print("\n"+punto,"puntos")
     print("Puntaje actual: ",puntaje,)
   elif respuesta_3 == "c":
     puntaje -= 5
     print("\nIncorrecto!...", nombre)
-    print("Perdistes",punto,"puntos")
+    print("\nPerdistes",punto,"puntos")
     print("Puntaje actual: ",puntaje,)
   elif respuesta_3 == "d":
     puntaje /= 2
     print("\nTotalmente incorrecto!...", nombre)
-    print("Se te dividirán tus puntos")
+    print("\nSe te dividirán tus puntos")
     print("Puntaje actual: ",puntaje,)
   else:
     puntaje *= 2
     print("\nCorrecto!", nombre)
     print("Lo hiciste bien! Se multiplicará tu puntaje!")
-    print("Puntaje actual: ",puntaje,)
+    print("\nPuntaje actual: ",puntaje,)
   time.sleep(2)
   print("\n4. ¿Quién fue el último zar de Rusia?")
   print('''
@@ -152,13 +156,13 @@ d. Pablo I''')
     punto = random.randint(0, 10)
     puntaje += punto
     print("\nCorrecto", nombre, "!")
-    print("Ganastes",punto,"puntos")
+    print("\nGanastes",punto,"puntos")
     print("Puntaje actual: ",puntaje)
   else:
     punto = random.randint(0, 10)
     puntaje -= punto
     print("\nIncorrecto", nombre, "!")
-    print("Perdistes",punto,"puntos")
+    print("\nPerdistes",punto,"puntos")
     print("Puntaje actual: ",puntaje)
   time.sleep(2)
   print (YELLOW+"\nGracias por jugar mi trivia ", nombre, ", \nalcanzaste", puntaje, "puntos"+RESET)
@@ -169,3 +173,5 @@ d. Pablo I''')
   if repetir_trivia != "si":  
     print("\nEspero",nombre, "que lo hayas pasado bien, hasta pronto!") 
     iniciar_trivia = False
+  else:
+    print(CYAN+"\033[1m\n¡Hola de nuevo",nombre+"!\033[0m"+RESET)
