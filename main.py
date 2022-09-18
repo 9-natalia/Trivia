@@ -189,92 +189,99 @@ d. Pablo I''')
     print("\nPerdistes",punto,"puntos")
     print("Puntaje actual: ",puntaje)
   time.sleep(2)
-  print(MAGENTA+"\033[1m"+"\nLista de puntajes obtenidos por pregunta"+"\033[0m"+RESET)
+  print(BLUE+"\033[1m"+"\n¡Acabaste la Trivia!",nombre,"\n"+RESET+"\033[0m")
   time.sleep(2)
-  print("\nIntento: ", intentos,"\n")
+  print("En unos momentos saldra de tu lista de puntajes...\n")
+  for numero_carga in range (5,0,-1):
+    print(numero_carga)
+    time.sleep(1)
+  print("\033c", end="")
+  print(MAGENTA+"\033[1m"+"\n.....:::::Lista de puntajes obtenidos por pregunta:::::.....\n"+RESET)
+  time.sleep(2)
+  print("\nIntento: ", intentos,"\n"+"\033[0m")
   time.sleep(2)
   lista_pregunta = ["Pregunta 1","Pregunta 2","Pregunta 3","Pregunta 4"]
   print(MAGENTA+"▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄")
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   if (lista_puntos[0] <= -10):
-    print("█ ",lista_pregunta[0],"  █    "+RESET,lista_puntos[0],MAGENTA+"    █ ")
+    print("█ ",lista_pregunta[0],"  █    ",lista_puntos[0],"    █ ")
     # El negativo de dos digitos
   elif (lista_puntos[0] < 0):
-    print("█ ",lista_pregunta[0],"  █    "+RESET,lista_puntos[0],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[0],"  █    ",lista_puntos[0],"     █ ")
     # El negativo de un digito
   elif (lista_puntos[0]==0):
-    print("█ ",lista_pregunta[0],"  █     "+RESET,lista_puntos[0],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[0],"  █     ",lista_puntos[0],"     █ ")
     # Si es igual a cero 
   elif (lista_puntos[0]>=10):
-    print("█ ",lista_pregunta[0],"  █    "+RESET,lista_puntos[0],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[0],"  █    ",lista_puntos[0],"     █ ")
     #El positivo de dos digitos
   else:
-    print("█ ",lista_pregunta[0],"  █     "+RESET,lista_puntos[0],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[0],"  █     ",lista_puntos[0],"     █ ")
     #El positivo de un digito
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   print("▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀")
-  time.sleep(2)
+  time.sleep(1)
   print("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄")
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   if (lista_puntos[1] <= -10):
-    print("█ ",lista_pregunta[1],"  █    "+RESET,lista_puntos[1],MAGENTA+"    █ ")
+    print("█ ",lista_pregunta[1],"  █    ",lista_puntos[1],"    █ ")
     # El negativo de dos digitos
   elif (lista_puntos[1] < 0):
-    print("█ ",lista_pregunta[1],"  █    "+RESET,lista_puntos[1],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[1],"  █    ",lista_puntos[1],"     █ ")
     # El negativo de un digito 
   elif (lista_puntos[1] == 0):
-    print("█ ",lista_pregunta[1],"  █      "+RESET,lista_puntos[1],MAGENTA+"    █ ")
+    print("█ ",lista_pregunta[1],"  █      ",lista_puntos[1],"    █ ")
     # Si es cero 
   elif(lista_puntos[1]>=100):
-    print("█ ",lista_pregunta[1],"  █    "+RESET,lista_puntos[1],MAGENTA+"    █ ")
+    print("█ ",lista_pregunta[1],"  █    ",lista_puntos[1],"    █ ")
     #El positivo de tres digitos
   elif(lista_puntos[1]>=10):
-    print("█ ",lista_pregunta[1],"  █    "+RESET,lista_puntos[1],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[1],"  █    ",lista_puntos[1],"     █ ")
     #El positivo de dos digitos
   else:
-    print("█ ",lista_pregunta[1],"  █     "+RESET,lista_puntos[1],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[1],"  █     ",lista_puntos[1],"     █ ")
     #El positivo de un digito 
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   print("▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀")
-  time.sleep(2)
+  time.sleep(1)
   print("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄")
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   if (lista_puntos[2] == "Puntaje / 2"):
-    print("█ ",lista_pregunta[2],"  █"+RESET,lista_puntos[2],MAGENTA+"█ ")
+    print("█ ",lista_pregunta[2],"  █",lista_puntos[2],"█ ")
     # Las palabras
   elif (lista_puntos[2] == "Puntaje * 2"):
-    print("█ ",lista_pregunta[2],"  █"+RESET,lista_puntos[2],MAGENTA+"█ ")
+    print("█ ",lista_pregunta[2],"  █",lista_puntos[2],"█ ")
     # Las palabras
   elif (lista_puntos[2] < 0):
-    print("█ ",lista_pregunta[2],"  █    "+RESET,lista_puntos[2],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[2],"  █    ",lista_puntos[2],"     █ ")
     #El negativo 
   else:
-    print("█ ",lista_pregunta[2],"  █     "+RESET,lista_puntos[2],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[2],"  █     ",lista_puntos[2],"     █ ")
     #El positivo 
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   print("▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀")
-  time.sleep(2)
+  time.sleep(1)
   print("▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄")
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   if (lista_puntos[3] <= -10):
-    print("█ ",lista_pregunta[3],"  █    "+RESET,lista_puntos[3],+MAGENTA+"    █ ")
+    print("█ ",lista_pregunta[3],"  █    ",lista_puntos[3],"    █ ")
     # El negativo de dos digitos
   elif (lista_puntos[3] < 0):
-    print("█ ",lista_pregunta[3],"  █    "+RESET,lista_puntos[3],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[3],"  █    ",lista_puntos[3],"     █ ")
     # El negativo de un digito
   elif (lista_puntos[3]==0):
-    print("█ ",lista_pregunta[3],"  █     "+RESET,lista_puntos[3],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[3],"  █     ",lista_puntos[3],"     █ ")
     # Si es igual a cero
   elif (lista_puntos[3]>=10):
-    print("█ ",lista_pregunta[3],"  █    "+RESET,lista_puntos[3],MAGENTA+"     █ ")
+    print("█ ",lista_pregunta[3],"  █    ",lista_puntos[3],"     █ ")
     # El positivo de dos digito 
   else:
-    print("█ ",lista_pregunta[3],"  █      "+RESET,lista_puntos[3],MAGENTA+"    █ ")
+    print("█ ",lista_pregunta[3],"  █      ",lista_puntos[3],"    █ ")
     # El positivo de un digito
   print("█ "+"\t"+"\t"+"\t"+"\t"+"█"+"\t"+"\t"+"\t"+"  █ ")
   print("▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀")
-  time.sleep(2)
-  print (YELLOW+"\nGracias por jugar mi trivia!", nombre,"!")
+  time.sleep(1)
+  print (RED+"\nGracias por jugar mi trivia!", nombre,"!")
   print("\nAlcanzaste", puntaje, "puntos"+RESET)
   time.sleep(2)
   print("\n¿Deseas intentar la trivia nuevamente?")
@@ -285,6 +292,8 @@ d. Pablo I''')
     iniciar_trivia = False
   else:
     print("\033c", end="")
-    print(CYAN+"\033[1m\n...:::¡Hola de nuevo",nombre+"!:::...\033[0m"+RESET)
+    time.sleep(1)
+    print(CYAN+"\n...:::¡Hola de nuevo",nombre+"!:::..."+RESET)
     puntaje = random.randint(0, 10)
+    time.sleep(2)
     print("\nEsta vez comenzarás con",puntaje,"puntos")
