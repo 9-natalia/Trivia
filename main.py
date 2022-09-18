@@ -68,7 +68,7 @@ d. Alemana\n''')
     print("Puntaje actual: ",puntaje)
   time.sleep(2)
   #Pregunta 2
-  print(YELLOW+"\n2. ¿Quién dibujo al famoso Hombre de Vitruvio?\n"+RESET)
+  print(YELLOW+"\n2. ¿Quién dibujo al famoso Hombre de Vitruvio?"+RESET)
   print('''
 a. Miguel Angel
 b. Leonardo da Vinci
@@ -165,7 +165,7 @@ d. René Descartes\n''')
   print(YELLOW+"\n4. ¿Quién fue el último zar de Rusia?"+RESET)
   print('''
 a. Nicolas II
-b. Predo I el Grande
+b. Pedro I el Grande
 c. Alejandro II
 d. Pablo I''')
   time.sleep(2)
@@ -284,6 +284,7 @@ d. Pablo I''')
     print("\nEspero",nombre, "que lo hayas pasado bien, hasta pronto!") 
     iniciar_trivia = False
   else:
+    print("\033c", end="")
     print(CYAN+"\033[1m\n...:::¡Hola de nuevo",nombre+"!:::...\033[0m"+RESET)
     puntaje = random.randint(0, 10)
     print("\nEsta vez comenzarás con",puntaje,"puntos")
